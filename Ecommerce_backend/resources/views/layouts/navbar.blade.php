@@ -1,1 +1,27 @@
-<h1>Navbar</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">Mi Ecommerce</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ url('/') }}">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/products') }}">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/products/create') }}">Crear Producto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/contact') }}">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
