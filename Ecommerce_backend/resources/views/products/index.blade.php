@@ -5,7 +5,7 @@
     <h1 class="mb-4 text-center">Lista de Productos</h1>
 
     <div class="row">
-        {{-- Ejemplo de productos estáticos (puedes cambiarlos luego por un foreach de Laravel) --}}
+        
         <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="https://golty.com.co/wp-content/uploads/2024/08/camiseta-deportiva-golty-hombre-blanca-azul-1.webp" class="card-img-top" alt="Camiseta Nike">
