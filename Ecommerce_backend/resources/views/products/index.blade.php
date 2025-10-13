@@ -4,40 +4,70 @@
 <div class="container">
     <h1 class="mb-4 text-center">Lista de Productos</h1>
 
-    <div class="row">
-        
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <img src="https://golty.com.co/wp-content/uploads/2024/08/camiseta-deportiva-golty-hombre-blanca-azul-1.webp" class="card-img-top" alt="Camiseta Nike">
-                <div class="card-body">
-                    <h5 class="card-title">Camiseta Nike</h5>
-                    <p class="card-text">$120.000</p>
-                    <a href="/products/1" class="btn btn-primary">Ver Detalles</a>
-                </div>
-            </div>
-        </div>
+    <!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ecommerce</title>
 
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/5f09742875d64ab7b527360a6834b5d9_9366/Tenis_de_Running_Galaxy_7_Negro_ID8760_HM11.jpg" class="card-img-top" alt="Tenis Adidas">
-                <div class="card-body">
-                    <h5 class="card-title">Tenis Adidas</h5>
-                    <p class="card-text">$320.000</p>
-                    <a href="/products/2" class="btn btn-primary">Ver Detalles</a>
-                </div>
-            </div>
+  <style>
+    .thumb {
+      width: 100%;
+      height: 250px; /* Ajusta este valor según prefieras */
+      object-fit: cover; /* Mantiene proporciones recortando exceso */
+      border-radius: 8px; /* Opcional, mejora el aspecto visual */
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Productos</h1>
+  
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <article class="product" aria-label="Camisa casual">
+        <img class="thumb" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Camisa casual">
+        <div class="title-row">
+          <h3>Camisa casual</h3>
+          <div class="price">$29.99</div>
         </div>
+        <p class="desc">Camisa ligera, ideal para uso diario. 100% algodón.</p>
+        <div class="actions">
+          <button class="btn btn-primary">Agregar</button>
+          <button class="btn btn-secondary">Detalles</button>
+        </div>
+      </article>
 
-        <div class="col-md-4 mb-4">
-            <div class="card h-100 shadow-sm">
-                <img src="https://m.media-amazon.com/images/I/915k7JyNxOL._AC_SL1500_.jpg" class="card-img-top" alt="Mochila Deportiva">
-                <div class="card-body">
-                    <h5 class="card-title">Mochila Deportiva</h5>
-                    <p class="card-text">$120.000</p>
-                    <a href="/products/3" class="btn btn-primary">Ver Detalles</a>
-                </div>
-            </div>
+      <article class="product" aria-label="Zapatos deportivos">
+        <img class="thumb" src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Zapatos deportivos">
+        <div class="title-row">
+          <h3>Zapatos deportivos</h3>
+          <div class="price">$59.99</div>
         </div>
+        <p class="desc">Cómodos y resistentes, suela antideslizante.</p>
+        <div class="actions">
+          <button class="btn btn-primary">Agregar</button>
+          <button class="btn btn-secondary">Detalles</button>
+        </div>
+      </article>
+
+      <article class="product" aria-label="Mochila urbana">
+        <img class="thumb" src="https://m.media-amazon.com/images/I/71K1fp1QGDL._AC_SL1500_.jpg" alt="Mochila urbana">
+        <div class="title-row">
+          <h3>Mochila urbana</h3>
+          <div class="price">$39.99</div>
+        </div>
+        <p class="desc">Compartimento para laptop y varios bolsillos organizadores.</p>
+        <div class="actions">
+          <button class="btn btn-primary">Agregar</button>
+          <button class="btn btn-secondary">Detalles</button>
+        </div>
+      </article>
     </div>
-</div>
+  </div>
+</body>
+</html>
 @endsection
+

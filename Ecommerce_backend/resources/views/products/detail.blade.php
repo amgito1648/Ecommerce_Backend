@@ -7,7 +7,7 @@
         <img src="https://golty.com.co/wp-content/uploads/2024/08/camiseta-deportiva-golty-hombre-blanca-azul-1.webp" 
              alt="Camiseta Nike" 
              class="thumb img-fluid mx-auto d-block" 
-             style="max-width: 400px; object-fit: contain;">
+             style="max-width: 400px">
 
         <div class="card-body text-center">
             <h3 class="card-title">Camiseta Nike</h3>
@@ -29,3 +29,5 @@
     </div>
 </div>
 @endsection
+
+ 
