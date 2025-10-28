@@ -7,10 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-   use HasFactory; 
+    use HasFactory; 
    
-   protected $table = 'categories';
-   protected $primaryKey= 'id';
-   public $timestamps= true;
-   protected $filliable = ['name']; 
+    protected $table = 'categories';
+    protected $primaryKey = 'id';
+    public $timestamps = true;
+
+    
+    protected $fillable = ['name'];
 }

@@ -32,7 +32,7 @@
     <div class="container-fluid py-2">
 
       <!-- CONTENT -->
-     @include('admin.layouts.dashboard')
+     @yield('content')
       <!-- End CONTENT -->
 
       <!-- FOOTER -->
