@@ -1,126 +1,60 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
     
-@section('content')    
-    
-@endsection
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Formulario de producto</title>
-  
-</head>
-<body>
-  <div class="container">
-    <h1>Registrar Producto</h1>
-    <form action="#" method="post" enctype="multipart/form-data">
-      <div>
-        <label for="nombre">Nombre del producto</label>
-        <input type="text" id="nombre" name="nombre" required>
+@section('content')  
+    <h2>Crear Nuevo Producto</h2>
+
+    <div class="card">
+        <div class="card-body">
+          <form>
+      <!-- Nombre del producto -->
+      <div class="input-group input-group-outline mb-3">
+        <label for="productName" class="form-label">Product Name</label>
+        <input type="text"  class= "form-control" id="productName" name="name" >
+      </div>
+      <!-- Descripcion del producto -->
+      <div class="input-group input-group-outline mb-3">
+        <label for="productDescription" class="form-label">Descripcion</label>
+        <textarea class="form-control" id="productDescription" rows="3" name ="description"> </textarea>
       </div>
 
-      <div>
-        <label for="precio">Precio</label>
-        <input type="number" id="precio" name="precio" step="0.01" required>
+      <!-- Precio del producto-->
+      <div class="input-group input-group-outline mb-3">
+        <label for="productPrice" class = "form-label">Price</label>
+        <input type="number" class = "form-control" id="productPrice"
+          step="0.01"  name="price" >  
+      </div>    
+
+      <!-- Categoria del Producto -->
+      <div class="input-group input-group-outline mb-3">
+        <select class= "form-control" id="productCategory">
+            <option value =""selected disabled>-- Category --</option>
+             @foreach ( $categories as $item)
+             <option value = "{{$item->id}}">{{$item->name}}</option>    
+            @endforeach
+          </select>   
+
+
       </div>
 
-      <div>
-        <label for="descripcion">Descripción</label>
-        <textarea id="descripcion" name="descripcion" required></textarea>
+      <!-- Marca del Producto -->
+      <div class="input-group input-group-outline mb-3">
+        <select class= "form-control" id="productBrand">
+            <option value =""selected disabled>-- Brand --</option>
+            @foreach ($brands as $item )
+                <option value="{{$item->id}}">{{$item->name}}</option>             
+            @endforeach
+        </select> 
       </div>
 
-      <div>
-        <label for="imagen">Imagen</label>
-        <input type="file" id="imagen" name="imagen" accept="image/*" required>
-      </div>
-
-      <div>
-        <label for="marca">Marca</label>
-        <input type="text" id="marca" name="marca" required>
-      </div>
-
-      <div class="actions">
-        <button type="reset" class="btn btn-secondary">Cancelar</button>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+      <!-- Boton de envio-->
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Create Product</button>
       </div>
     </form>
-  </div>
-</body>
-</html>
-@section('css')
-<style>
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-      background: #f6f7fb;
-      color: #222;
-      padding: 30px;
-    }
 
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(20,20,40,0.06);
-    }
+        </div>
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 1.4rem;
-    }
+    </div>
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    label {
-      font-weight: 600;
-      margin-bottom: 4px;
-      display: block;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 80px;
-    }
-
-    .actions {
-      display: flex;
-      justify-content: flex-end;
-      gap: 12px;
-    }
-
-    .btn {
-      padding: 10px 16px;
-      border-radius: 8px;
-      border: none;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .btn-primary {
-      background: #1f8ef1;
-      color: #fff;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border: 1px solid #ddd;
-      color: #333;
-    }
-  </style>
+    
 @endsection
