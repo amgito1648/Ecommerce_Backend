@@ -11,20 +11,29 @@
       <!-- Nombre del producto -->
       <div class="input-group input-group-outline mb-3">
         <label for="productName" class="form-label">Product Name</label>
-        <input type="text"  class= "form-control" id="productName" name="name" >
+        <input type="text"  class= "form-control" id="productName" name="name" value="{{ old('name') }}">
       </div>
+      @error('name')
+            <small class= "text-danger">{{ $message }} </small>   
+        @enderror
       <!-- Descripcion del producto -->
       <div class="input-group input-group-outline mb-3">
         <label for="productDescription" class="form-label">Descripcion</label>
-        <textarea class="form-control" id="productDescription" rows="3" name ="description"> </textarea>
+        <textarea class="form-control" id="productDescription" rows="3" name ="description">"{{ old('name') }}"</textarea>
       </div>
+      @error('description')
+            <small class= "text-danger">{{ $message }} </small>   
+        @enderror
 
       <!-- Precio del producto-->
       <div class="input-group input-group-outline mb-3">
         <label for="productPrice" class = "form-label">Price</label>
         <input type="number" class = "form-control" id="productPrice"
-          step="0.01"  name="price" >  
-      </div>    
+          step="0.01"  name="price"  value ="{{ old('name') }}">  
+      </div> 
+      @error('price')
+            <small class= "text-danger">{{ $message }} </small>   
+        @enderror   
 
       <!-- Categoria del Producto -->
       <div class="input-group input-group-outline mb-3">
@@ -37,6 +46,9 @@
 
 
       </div>
+      @error('category')
+            <small class= "text-danger">{{ $message }} </small>   
+        @enderror
 
       <!-- Marca del Producto -->
       <div class="input-group input-group-outline mb-3">
@@ -47,6 +59,9 @@
             @endforeach
         </select> 
       </div>
+      @error('brand')
+            <small class= "text-danger">{{ $message }} </small>   
+        @enderror
 
       <!-- Boton de envio-->
       <div class="d-grid">
