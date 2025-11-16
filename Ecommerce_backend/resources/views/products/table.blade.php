@@ -7,6 +7,8 @@
     <div class="card-body">
          <h2>Products List</h2>
 
+         <a type="button" class="btn btn-success" href ="{{ route('admin.products.create') }}">Add New Product</a>
+
         <table class = "table align-items-center mb-0">
 
             <thead>
@@ -72,6 +74,8 @@
 
 
         </table>
+
+        {{ $products->links() }}
     </div>
 </div>
 
