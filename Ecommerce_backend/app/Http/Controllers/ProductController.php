@@ -75,4 +75,14 @@ class ProductController extends Controller
             'products' => $products
         ]);
     }
+
+    public function destroy($id)
+{
+    $product = Product::findOrFail($id);
+    $product->delete();
+
+    return redirect()->back()->with('success', 'Producto eliminado correctamente');
 }
+
+}
+

@@ -28,12 +28,14 @@ Route::prefix('admin')->group(function(){
 
     Route::get('products', [ProductController::class,'table'])->name('admin.products.table');
 
+    Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+
+
 
 
 });   
 
 
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

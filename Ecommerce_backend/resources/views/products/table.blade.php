@@ -62,7 +62,15 @@
                     
                 </td>
                 <td>
-                    <a style="color:red" href="#">Eliminar</a>
+                    <form action="{{ route('products.destroy', $product->id) }}" 
+                        method="POST" 
+                        onsubmit="return confirm('¿Seguro que deseas eliminar este producto?');">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" style="color:red; background:none; border:none; padding:0;">
+                        Eliminar
+                         </button>
+                    </form>
                 </td>
                 </tr>
                     
