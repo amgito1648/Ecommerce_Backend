@@ -11,6 +11,5 @@ class Brand extends Model
     protected $table = 'brand';
     protected $primaryKey = 'id';
     public $timestamps = true;
-    protected $fillable = ['name'];
+    protected $fillable = ['name' ,'slug', 'logo'];
 }
-

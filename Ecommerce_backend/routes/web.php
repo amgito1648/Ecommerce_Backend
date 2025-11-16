@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
@@ -30,12 +31,17 @@ Route::prefix('admin')->group(function(){
 
     Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
 
+    Route::get('/brands', [BrandController::class, 'index'])->name('admin.brands.index');
+    Route::get('/brands/create', [BrandController::class, 'create'])->name('admin.brands.create');
+    Route::post('/brands', [BrandController::class, 'store'])->name('admin.brands.store');
+
+    Route::get('/brands/{id}/edit', [BrandController::class, 'edit'])->name('admin.brands.edit');
+    Route::put('/brands/{id}', [BrandController::class, 'update'])->name('admin.brands.update');
+
+    Route::delete('/brands/{id}', [BrandController::class, 'destroy'])->name('admin.brands.destroy');
+
 
 
 
 });   
-
-
-
-
 
